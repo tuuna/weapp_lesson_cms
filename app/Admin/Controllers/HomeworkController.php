@@ -21,8 +21,8 @@ class HomeworkController extends Controller
     public function index()
     {
         return Admin::content(function (Content $content) {
-            $content->header('新增活动');
-            $content->description('新增活动页面');
+            $content->header('新增作业');
+            $content->description('新增作业页面');
             $content->body($this->form());
         });
     }
@@ -50,7 +50,7 @@ class HomeworkController extends Controller
         $result = Homework::create([
             'coursename' => $data['coursename'],
             'departid' => json_encode($data['departid']),
-            'content' => $data['content'],
+            'content' => strip_tags($data['content']),
             'subtime' => $data['subtime'],
             'teacherid' => $data['teacherid']
         ]);
@@ -60,4 +60,5 @@ class HomeworkController extends Controller
             echo "发布作业失败";
         }
     }
+
 }

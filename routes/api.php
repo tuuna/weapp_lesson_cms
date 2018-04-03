@@ -24,3 +24,4 @@ Route::middleware('api')->get('/project',
             ->get();
         return $sponsors;
     });
+
