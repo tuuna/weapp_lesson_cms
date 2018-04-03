@@ -78,7 +78,7 @@
                                 <h4 class="modal-title" id="myModalLabel">此码生存期1min30s</h4>
                             </div>
                             <div class="modal-body text-center">
-                                {!! QrCode::size(200)->generate('http://127.0.0.1:8000/api/sign/'.$token); !!}
+                                {!! QrCode::size(200)->generate('https://class.vampirebitter.top/api/sign/'.$token); !!}
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
